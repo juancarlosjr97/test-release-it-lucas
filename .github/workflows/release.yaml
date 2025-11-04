@@ -8,6 +8,6 @@ on:
 
 jobs:
   release-automation:
-    uses: juancarlosjr97/release-it-containerized
+    uses: juancarlosjr97/release-it-containerized@0.7.100
     with:
       plugins_list: "@release-it/conventional-changelog,@release-it/bumper"
