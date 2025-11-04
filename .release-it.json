@@ -1,78 +1,74 @@
 {
-    "git": {
-        "commitMessage": "Released version ${version}",
-        "commitsPath": ".",
-        "push": true,
-        "requireCommits": true,
-        "requireCommitsFail": false,
-        "tagName": "${version}"
-    },
+  "git": {
+    "commitMessage": "Released version ${version} [skip-ci]",
+    "commitsPath": ".",
+    "push": true,
+    "requireCommits": true,
+    "requireCommitsFail": false,
+    "tagAnnotation": "Release ${version}",
+    "tagName": "${version}"
+  },
     "github": {
         "release": true,
-        "releaseName": "${version}",
-        "comments": {
-            "submit": true,
-            "issue": ":rocket: _This issue has been resolved in v${version}. See [${releaseName}](${releaseUrl}) for release notes._",
-            "pr": ":rocket: _This pull request is included in v${version}. See [${releaseName}](${releaseUrl}) for release notes._"
-        }
+        "releaseName": "${version}"
     },
-    "plugins": {
-        "@release-it/conventional-changelog": {
-            "gitRawCommitsOpts": {
-                "path": "."
-            },
-            "header": "# Changelog\n\nThis changelog is auto generated using release-it.\n",
-            "infile": "CHANGELOG.md",
-            "path": ".",
-            "preset": {
-                "name": "conventionalcommits",
-                "types": [
-                    {
-                        "section": "Features",
-                        "type": "feat"
-                    },
-                    {
-                        "section": "Bug Fixes",
-                        "type": "fix"
-                    },
-                    {
-                        "section": "Tests",
-                        "type": "test"
-                    },
-                    {
-                        "section": "Chores",
-                        "type": "chore"
-                    },
-                    {
-                        "section": "Documentation",
-                        "type": "docs"
-                    },
-                    {
-                        "section": "Performance Improvements",
-                        "type": "perf"
-                    },
-                    {
-                        "section": "Code Refactoring",
-                        "type": "refactor"
-                    },
-                    {
-                        "section": "Code Style Changes",
-                        "type": "style"
-                    },
-                    {
-                        "section": "Build Changes",
-                        "type": "build"
-                    },
-                    {
-                        "section": "Continuous Integration",
-                        "type": "ci"
-                    },
-                    {
-                        "section": "Reverts",
-                        "type": "revert"
-                    }
-                ]
-            }
-        }
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "gitRawCommitsOpts": {
+        "path": "."
+      },
+      "header": "# Changelog\n\nThis changelog is auto generated using release-it.\n",
+      "infile": "CHANGELOG.md",
+      "path": ".",
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "section": "Features",
+            "type": "feat"
+          },
+          {
+            "section": "Bug Fixes",
+            "type": "fix"
+          },
+          {
+            "section": "Tests",
+            "type": "test"
+          },
+          {
+            "section": "Chores",
+            "type": "chore"
+          },
+          {
+            "section": "Documentation",
+            "type": "docs"
+          },
+          {
+            "section": "Performance Improvements",
+            "type": "perf"
+          },
+          {
+            "section": "Code Refactoring",
+            "type": "refactor"
+          },
+          {
+            "section": "Code Style Changes",
+            "type": "style"
+          },
+          {
+            "section": "Build Changes",
+            "type": "build"
+          },
+          {
+            "section": "Continuous Integration",
+            "type": "ci"
+          },
+          {
+            "section": "Reverts",
+            "type": "revert"
+          }
+        ]
+      }
+    }
   }
 }
