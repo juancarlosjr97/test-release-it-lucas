@@ -1,0 +1,19 @@
+---
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  tests:
+    uses: juancarlosjr97/github-actions-workflows-to-rule-them-all/.github/workflows/shared-python-tests.yml@main
+
+  release-automation:
+    needs: tests
+    uses: juancarlosjr97/github-actions-workflows-to-rule-them-all/.github/workflows/shared-release-automation.yml@main
+    secrets:
+      PROJECT_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    with:
+      PLUGIN_LIST: "@release-it/conventional-changelog,@release-it/bumper"
