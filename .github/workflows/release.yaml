@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
         with:
           fetch-depth: 0
 
       - name: Running release-it using GitHub Action
-        uses: juancarlosjr97/release-it-containerized:0.7.100
+        uses: juancarlosjr97/release-it-containerized@950782a45ef5b312fd65508e1cc410b034d77d4b # 0.7.100
         with:
           plugins_list: "@release-it/conventional-changelog@latest,@release-it/bumper@latest"
