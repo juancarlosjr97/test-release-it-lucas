@@ -74,12 +74,15 @@
                 ]
             }
         },
-        "@release-it/bumper": {
-            "in": "pyproject.toml",
-            "out": {
-                "file": "pyproject.toml",
-                "path": "project.version"
-            }
-        }
+"@release-it/bumper": {
+      "in": {
+        "file": "VERSION",
+        "type": "text/plain"
+      },
+      "out": {
+        "file": "VERSION",
+        "type": "text/plain"
+      }
     }
+  }
 }
