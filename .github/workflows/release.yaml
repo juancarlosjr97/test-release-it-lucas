@@ -13,6 +13,6 @@ jobs:
           fetch-depth: 0
 
       - name: Running release-it using GitHub Action
-        uses: juancarlosjr97/release-it-containerized:0.2.0
+        uses: juancarlosjr97/release-it-containerized:0.7.100
         with:
           plugins_list: "@release-it/conventional-changelog@latest,@release-it/bumper@latest"
