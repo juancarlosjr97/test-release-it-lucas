@@ -6,7 +6,8 @@
     "requireCommits": true,
     "requireCommitsFail": false,
     "tagAnnotation": "Release ${version}",
-    "tagName": "${version}"
+    "tagName": "${version}",
+    "requireCleanWorkingDir": false
   },
     "github": {
         "release": true,
